@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Application</title>
+    <link rel="stylesheet" href="../style/index.css">
+</head>
+
+<body>
+
+    <h2>Online medical store</h2>
+
+    <div id="container">
+
+        <div id="newUserPage">
+
+            <h3>Sign Up Page</h3>
+
+            <form onsubmit="signupvalidate()">
+
+                <label>User Name:</label><br>
+                <input type="text" id="name">
+                <label id="nameerror"></label><br>
+
+                <label>Email ID:</label><br>
+                <input type="text" id="emailid"><br>
+
+                <label>Password:</label><br>
+                <input type="password" id="password"><br>
+
+                <label>Confirm Password:</label><br>
+                <input type="password" id="Confirmpassword"><br>
+
+                <label>Phone Number:</label><br>
+                <input type="text" id="phonenumber"><br>
+
+                <button type="submit" onclick="signup()">Sign Up</button>
+            </form>
+
+        </div>
+
+
+
+        <div id="existingUserPage">
+            <h3>Sign In Page</h3>
+
+            <form>
+                <label>Email ID:</label>
+                <input type="text" id="existemailid"><br>
+
+                <label>Password:</label>
+                <input type="password" id="existpassword"><br>
+
+                <button type="button" onclick="login()">Sign In</button>
+
+            </form>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <div id="homepage">
+        <h2>hello!</h2>
+    </div>
+
+
+
+    <div id="menu">
+        <button type="button" onclick="medicinetable()">Medical details</button>
+
+        <button type="button" onclick="purchasetable()">Purchase</button>
+
+        <button type="button" onclick="showcancelorder()">Cancel</button>
+
+        <button type="button" onclick="orderhistory()">Order History</button>
+
+        <button type="button" onclick="displayrecharge()">TopUp</button>
+
+        <button type="button" onclick="showbalance()">Balance</button>
+    </div>
+
+
+    <div id="medicinedetail">
+
+        <table>
+            <thead>
+                <th>Medicine Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Expiry</th>
+                <th>Action</th>
+            </thead>
+            <tbody id="medicinetable">
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <div id="purchase">
+        <table>
+            <thead>
+                <th>Medicine Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Expiry</th>
+                <th>Action</th>
+            </thead>
+            <tbody id="purchasetable">
+
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <div id="quantityblock">
+        <label>Enter the quantity</label>
+        <input type="text" id="quantity">
+
+        <button type="button" onclick="quantity()">Add</button>
+    </div>
+
+    <div id="orderblock">
+
+        <table>
+            <thead>
+                <!--<th>MedicineID</th>
+                <th>UserID</th>
+                <th>MedicineName</th>
+                <th>Quantity</th>
+                -->
+            </thead>
+            <tbody id="ordertable">
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <!--<div id="order-table">
+        <th>MedicineID</th>
+        <th>UserID</th>
+        <th>MedicineName</th>
+        <th>Quantity</th>
+    </div>
+    -->
+
+    <!--<div id="topupblock">
+
+        <div id="rechargeblock">
+            <label>Recharge</label>
+            <input type="text" id="amount">
+            <button onclick="recharge()">Update</button>
+        </div>
+
+    </div>-->
+
+
+
+
+
+
+    <div id="rechargeblock">
+        <label>Recharge Amount</label>
+        <input type="text" id="amount">
+        <button onclick="recharge()">Add</button>
+    </div>
+
+
+    <div id="balanceblock">
+        <!-- <button type="button" onclick="showbalance()">Show Balance</button> -->
+        <p id="balance"></p>
+    </div>
+
+
+    <div id="formblock">
+        <label>Name</label>
+        <input type="text" id="medicinename">
+
+        <label>Price</label>
+        <input type="text" id="medicineprice">
+
+        <label>Quantity</label>
+        <input type="text" id="medicinequantity">
+
+        <button type="button" onclick="edit()">Add</button>
+    </div>
+
+
+
+
+
+
+    <script src="index.js"></script>
+
+
+
+
+</body>
+
+</html>
