@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Card Management</title>
+    <link rel="stylesheet" href="../style/index.css">
+</head>
+
+<body>
+    <h2>Metro Card Management</h2>
+
+    
+        <div id="card">
+
+            <div id="newuserpage">
+                <h3>Sign Up</h3><br>
+                <label>Name</label><br>
+                <input type="text" id="name"><br>
+                <label>Phone Number</label><br>
+                <input type="text" id="phone"><br>
+                <label>Wallet Amount</label><br>
+                <input type="text" id="Walletamount"><br>
+                <!--<label>Confirm Password</label><br>
+                    <input type="text" id="Confirmpass"><br>
+                    <label>Phone Number</label><br>
+                    <input type="text" id="phone"><br><br>-->
+
+                <button type="button" onclick="signup()">Sign Up</button>
+            </div>
+
+
+            <div id="existinguserpage">
+                <h3>Sign In</h3><br>
+                <label>User Name</label><br>
+                <input type="text" id="existname"><br>
+                <label>Phone Number</label><br>
+                <input type="text" id="existphone"><br>
+
+                <button type="button" onclick="login()">Sign In</button>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="menublock">
+        <h3>Welcome</h3><br>
+
+        <nav>
+            <div onclick="showbalance()">Show Balance</div>
+            <div onclick="displayrecharge()">Recharge</div>
+            <div onclick="travelhistory()">View Travel History</div>
+            <div onclick="travel()">Travel</div>
+        </nav>
+
+    </div>
+
+
+    <div id="balanceblock">
+        <br>
+        <h3>User Balance</h3><br>
+        <p id="balance-message"></p>
+    </div>
+
+
+    <div id="rechargeblock">
+        <label>Recharge Amount</label>
+        <input type="text" id="rechargeamount">
+        <button type="button" onclick="recharge()">Add</button>
+    </div>
+
+
+
+    <div id="travelhistoryblock">
+        <h3>Travel History</h3><br>
+        <table>
+            <thead>
+                <!--<th>TravelID</th>
+                <th>CardNumber</th>
+                <th>FromLocation</th>
+                <th>ToLocation</th>
+                <th>Date</th>
+                <th>TravelCost</th>-->
+            </thead>
+            <tbody id="travel-table">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <div id="ticketfairblock">
+        <h3>Ticket Fair Details</h3><br>
+        <table>
+            <thead>
+                <!--<th>TicketID</th>
+                <th>FromLocation</th>
+                <th>ToLocation</th>
+                <th>TicketPrice</th>-->
+            </thead>
+            <tbody id="ticket-table">
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div id="ticketidgettingblock">
+        <label>Enter the Ticket ID:</label>
+        <input type="text" id="ticketid">
+        <button type="button" onclick="process()">Click</button>
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
